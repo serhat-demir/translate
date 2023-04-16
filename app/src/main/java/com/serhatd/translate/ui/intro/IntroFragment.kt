@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.serhatd.translate.R
 import com.serhatd.translate.databinding.FragmentIntroBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -19,6 +20,13 @@ class IntroFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_intro, container, false)
         binding.viewModel = viewModel
+
+        viewModel.introSkippedObserver.observe(viewLifecycleOwner) {
+            it?.let {
+                findNavController().popBackStack()
+            }
+        }
+
         return binding.root
     }
 }
