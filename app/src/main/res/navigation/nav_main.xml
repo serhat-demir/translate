@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/translateFragment">
+
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.serhatd.translate.ui.intro.IntroFragment"
+        android:label="IntroFragment"
+        tools:layout="@layout/fragment_intro" />
+    <fragment
+        android:id="@+id/translateFragment"
+        android:name="com.serhatd.translate.ui.translate.TranslateFragment"
+        android:label="TranslateFragment"
+        tools:layout="@layout/fragment_translate" >
+        <action
+            android:id="@+id/translateToIntro"
+            app:destination="@id/introFragment" />
+    </fragment>
+</navigation>
