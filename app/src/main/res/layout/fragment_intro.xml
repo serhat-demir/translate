@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable name="viewModel"
+            type="com.serhatd.translate.ui.intro.IntroViewModel" />
     </data>
 
     <LinearLayout
@@ -60,6 +61,7 @@
                 android:insetBottom="0dp"
                 android:background="@drawable/intro_button_background"
                 android:layout_marginTop="16dp"
+                android:onClick="@{() -> viewModel.setIntroSkipped()}"
                 android:textSize="20sp"
                 android:textAllCaps="false"
                 android:text="@string/intro_btn_continue" />
