@@ -10,10 +10,10 @@ import retrofit2.http.Headers
 import retrofit2.http.POST
 
 interface TranslateService {
-    @GET("/v2/languages")
+    @GET("v2/languages")
     suspend fun getLanguages(): Response<LanguageResponse>
 
-    @POST("/v2")
+    @POST("v2")
     @Headers("Content-Type: application/json")
     suspend fun translate(
         @Body translationRequest: TranslationRequest

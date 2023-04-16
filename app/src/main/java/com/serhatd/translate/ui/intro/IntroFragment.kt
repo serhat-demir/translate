@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.serhatd.translate.R
 import com.serhatd.translate.databinding.FragmentIntroBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class IntroFragment : Fragment() {
     private lateinit var binding: FragmentIntroBinding
 

@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.serhatd.translate.R
 import com.serhatd.translate.databinding.FragmentTranslateBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class TranslateFragment : Fragment() {
     private lateinit var binding: FragmentTranslateBinding
 
