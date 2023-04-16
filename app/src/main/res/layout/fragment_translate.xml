@@ -1,231 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingHorizontal="24dp"
-    tools:context=".ui.translate.TranslateFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/translate_languages_background"
-        android:orientation="horizontal"
-        android:weightSum="100"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <data>
 
-        <ImageView
-            android:id="@+id/imgSrcLang"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/app_icon"
-            app:layout_constraintDimensionRatio="1:1" />
+    </data>
 
-        <com.skydoves.powerspinner.PowerSpinnerView
-            android:id="@+id/spSrcLang"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="30"
-            android:gravity="center"
-            android:hint="@string/hint_language"
-            android:paddingHorizontal="16dp"
-            android:paddingVertical="4dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/txtSourceCurrency"
-            app:layout_constraintTop_toTopOf="@+id/txtSourceCurrency"
-            app:spinner_arrow_gravity="end"
-            app:spinner_arrow_padding="8dp"
-            app:spinner_divider_color="@color/white"
-            app:spinner_divider_show="true"
-            app:spinner_divider_size="0.4dp"
-            app:spinner_item_height="50dp"
-            app:spinner_popup_animation="dropdown"
-            app:spinner_popup_elevation="14dp"
-            app:spinner_popup_max_height="150dp" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="5" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_arrow"
-            app:layout_constraintDimensionRatio="1:1" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="5" />
-
-        <ImageView
-            android:id="@+id/imgTarLang"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/app_icon"
-            app:layout_constraintDimensionRatio="1:1" />
-
-        <com.skydoves.powerspinner.PowerSpinnerView
-            android:id="@+id/spTarLang"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="30"
-            android:gravity="center"
-            android:hint="@string/hint_language"
-            android:paddingHorizontal="16dp"
-            android:paddingVertical="4dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/txtSourceCurrency"
-            app:layout_constraintTop_toTopOf="@+id/txtSourceCurrency"
-            app:spinner_arrow_gravity="end"
-            app:spinner_arrow_padding="8dp"
-            app:spinner_divider_color="@color/white"
-            app:spinner_divider_show="true"
-            app:spinner_divider_size="0.4dp"
-            app:spinner_item_height="50dp"
-            app:spinner_popup_animation="dropdown"
-            app:spinner_popup_elevation="14dp"
-            app:spinner_popup_max_height="150dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginVertical="16dp"
-        android:orientation="vertical"
-        android:weightSum="100"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="24dp"
+        tools:context=".ui.translate.TranslateFragment">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/translate_languages_background"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgSrcLang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/app_icon"
+                app:layout_constraintDimensionRatio="1:1" />
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:id="@+id/spSrcLang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:gravity="center"
+                android:hint="@string/hint_language"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="4dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtSourceCurrency"
+                app:layout_constraintTop_toTopOf="@+id/txtSourceCurrency"
+                app:spinner_arrow_gravity="end"
+                app:spinner_arrow_padding="8dp"
+                app:spinner_divider_color="@color/white"
+                app:spinner_divider_show="true"
+                app:spinner_divider_size="0.4dp"
+                app:spinner_item_height="50dp"
+                app:spinner_popup_animation="dropdown"
+                app:spinner_popup_elevation="14dp"
+                app:spinner_popup_max_height="150dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_arrow"
+                app:layout_constraintDimensionRatio="1:1" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5" />
+
+            <ImageView
+                android:id="@+id/imgTarLang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/app_icon"
+                app:layout_constraintDimensionRatio="1:1" />
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:id="@+id/spTarLang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:gravity="center"
+                android:hint="@string/hint_language"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="4dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtSourceCurrency"
+                app:layout_constraintTop_toTopOf="@+id/txtSourceCurrency"
+                app:spinner_arrow_gravity="end"
+                app:spinner_arrow_padding="8dp"
+                app:spinner_divider_color="@color/white"
+                app:spinner_divider_show="true"
+                app:spinner_divider_size="0.4dp"
+                app:spinner_item_height="50dp"
+                app:spinner_popup_animation="dropdown"
+                app:spinner_popup_elevation="14dp"
+                app:spinner_popup_max_height="150dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="45"
+            android:layout_marginVertical="16dp"
             android:orientation="vertical"
             android:weightSum="100"
-            android:background="@drawable/translate_input_background">
-
-            <EditText
-                android:id="@+id/txtSrcLang"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="98"
-                android:ems="10"
-                android:insetBottom="0dp"
-                android:gravity="top|start"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:inputType="textMultiLine"
-                android:hint="@string/hint_translate_input"
-                tools:ignore="NestedWeights" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="end|center"
-                android:weightSum="25"
-                android:layout_weight="2">
+                android:layout_height="0dp"
+                android:layout_weight="45"
+                android:orientation="vertical"
+                android:weightSum="100"
+                android:background="@drawable/translate_input_background">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_copy" />
+                <EditText
+                    android:id="@+id/txtSrcLang"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="98"
+                    android:ems="10"
+                    android:insetBottom="0dp"
+                    android:gravity="top|start"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:inputType="textMultiLine"
+                    android:hint="@string/hint_translate_input"
+                    tools:ignore="NestedWeights" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_paste" />
+                    android:gravity="end|center"
+                    android:weightSum="25"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_copy" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_paste" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="8"
-            android:textAllCaps="false"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
-            android:textSize="20sp"
-            android:text="@string/btn_translate" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="45"
-            android:orientation="vertical"
-            android:weightSum="100"
-            android:background="@drawable/translate_input_background">
-
-            <EditText
-                android:id="@+id/txtTarLang"
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="98"
-                android:ems="10"
-                android:enabled="false"
-                android:textSize="20sp"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:textAllCaps="false"
+                android:insetTop="0dp"
                 android:insetBottom="0dp"
-                android:gravity="top|start"
-                android:textColor="@color/black"
-                android:inputType="textMultiLine"
-                android:hint="@string/hint_translated"
-                tools:ignore="NestedWeights" />
+                android:textSize="20sp"
+                android:text="@string/btn_translate" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="end|center"
-                android:weightSum="25"
-                android:layout_weight="2">
+                android:layout_height="0dp"
+                android:layout_weight="45"
+                android:orientation="vertical"
+                android:weightSum="100"
+                android:background="@drawable/translate_input_background">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_copy" />
+                <EditText
+                    android:id="@+id/txtTarLang"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="98"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:textSize="20sp"
+                    android:insetBottom="0dp"
+                    android:gravity="top|start"
+                    android:textColor="@color/black"
+                    android:inputType="textMultiLine"
+                    android:hint="@string/hint_translated"
+                    tools:ignore="NestedWeights" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_paste" />
+                    android:gravity="end|center"
+                    android:weightSum="25"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_copy" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_paste" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
