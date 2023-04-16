@@ -9,6 +9,10 @@ android {
     namespace 'com.serhatd.translate'
     compileSdk 33
 
+    buildFeatures {
+        dataBinding = true
+    }
+
     defaultConfig {
         applicationId "com.serhatd.translate"
         minSdk 24

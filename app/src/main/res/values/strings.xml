@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Translate</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="intro_text_primary">Translate Over \n100 Language</string>
+    <string name="intro_text_secondary">Cross language borders with our app</string>
 </resources>
