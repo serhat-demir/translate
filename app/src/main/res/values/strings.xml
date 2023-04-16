@@ -1,7 +1,14 @@
 <resources>
     <string name="app_name">Translate</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- intro -->
     <string name="intro_text_primary">Translate Over \n100 Language</string>
     <string name="intro_text_secondary">Cross language borders with our app</string>
+    <string name="intro_btn_continue">Continue</string>
+
+    <!-- translate -->
+    <string name="hint_language">…</string>
+    <string name="hint_translate_input">Type something…</string>
+    <string name="hint_translated">Translated</string>
+    <string name="btn_translate">Translate</string>
 </resources>

@@ -61,7 +61,8 @@
                 android:background="@drawable/intro_button_background"
                 android:layout_marginTop="16dp"
                 android:textSize="20sp"
-                android:text="Continue" />
+                android:textAllCaps="false"
+                android:text="@string/intro_btn_continue" />
         </LinearLayout>
     </LinearLayout>
 </layout>
