@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Çeviri</string>
+
+    <!-- intro -->
+    <string name="intro_text_primary">100\'den Fazla \nDile Çevir</string>
+    <string name="intro_text_secondary">Uygulamamızla dil sınırlarını aşın</string>
+    <string name="intro_btn_continue">Devam Et</string>
+
+    <!-- translate -->
+    <string name="three_dots">…</string>
+    <string name="hint_translate_input">Bir şeyler yazın…</string>
+    <string name="hint_translated">Çeviri</string>
+    <string name="btn_translate">Çevir</string>
+    <string name="msg_text_copied">Yazı panoya kopyalandı.</string>
+</resources>
