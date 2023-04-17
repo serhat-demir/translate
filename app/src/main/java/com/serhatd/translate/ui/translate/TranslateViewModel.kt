@@ -7,12 +7,14 @@ import com.serhatd.translate.data.model.Language
 import com.serhatd.translate.data.model.TranslationRequest
 import com.serhatd.translate.data.prefs.SharedPrefs
 import com.serhatd.translate.data.repository.TranslateRepository
+import com.serhatd.translate.ui.helper.StringCode
+import com.serhatd.translate.ui.helper.ToastManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class TranslateViewModel @Inject constructor(private val prefs: SharedPrefs, private val repo: TranslateRepository): ViewModel() {
+class TranslateViewModel @Inject constructor(private val prefs: SharedPrefs, private val repo: TranslateRepository, private val toast: ToastManager): ViewModel() {
     val introObserver = MutableLiveData<Boolean>()
     val languages = MutableLiveData<List<Language>>()
     val translatedText = MutableLiveData<String>()
@@ -28,29 +30,29 @@ class TranslateViewModel @Inject constructor(private val prefs: SharedPrefs, pri
             if (response.isSuccessful && response.body() != null) {
                 languages.value = response.body()!!.languages
             } else {
-                // error
+                toast.showToast(StringCode.SOMETHING_WENT_WRONG)
             }
         }
     }
 
     fun translate(q: String, srcLangIndex: Int, tarLangIndex: Int) {
         if (q.trim().isEmpty()) {
-            // error
+            toast.showToast(StringCode.SRC_TEXT_EMPTY)
             return
         }
 
         if (languages.value == null) {
-            // error
+            toast.showToast(StringCode.SOMETHING_WENT_WRONG)
             return
         }
 
         if (srcLangIndex == -1 || tarLangIndex == -1) {
-            // error
+            toast.showToast(StringCode.SELECT_LANGUAGE)
             return
         }
 
         if (srcLangIndex == tarLangIndex) {
-            // error
+            toast.showToast(StringCode.SAME_LANGUAGE)
             return
         }
 
@@ -63,7 +65,7 @@ class TranslateViewModel @Inject constructor(private val prefs: SharedPrefs, pri
             if (response.isSuccessful && response.body() != null) {
                 translatedText.value = response.body()!!.data.translation.translatedText
             } else {
-                // error
+                toast.showToast(StringCode.SOMETHING_WENT_WRONG)
             }
         }
     }

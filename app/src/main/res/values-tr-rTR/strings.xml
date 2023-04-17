@@ -12,4 +12,10 @@
     <string name="hint_translated">Çeviri</string>
     <string name="btn_translate">Çevir</string>
     <string name="msg_text_copied">Yazı panoya kopyalandı.</string>
+
+    <!-- api messages -->
+    <string name="msg_something_went_wrong">Bir şeyler ters gitti. Daha sonra tekrar deneyin.</string>
+    <string name="msg_same_language">Aynı dile çeviri yapamazsınız.</string>
+    <string name="msg_select_language">Çeviriden önce dil seçmeniz gerekiyor.</string>
+    <string name="msg_src_text_empty">Çeviri için bir şeyler yazmanız gerekiyor.</string>
 </resources>

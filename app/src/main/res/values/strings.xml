@@ -12,4 +12,10 @@
     <string name="hint_translated">Translated</string>
     <string name="btn_translate">Translate</string>
     <string name="msg_text_copied">Text copied to clipboard.</string>
+
+    <!-- api messages -->
+    <string name="msg_something_went_wrong">Something went wrong. Try again later.</string>
+    <string name="msg_same_language">You can not translate to same language.</string>
+    <string name="msg_select_language">You must select language before translate.</string>
+    <string name="msg_src_text_empty">You must type something to translate.</string>
 </resources>
