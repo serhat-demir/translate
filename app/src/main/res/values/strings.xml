@@ -7,8 +7,9 @@
     <string name="intro_btn_continue">Continue</string>
 
     <!-- translate -->
-    <string name="hint_language">…</string>
+    <string name="three_dots">…</string>
     <string name="hint_translate_input">Type something…</string>
     <string name="hint_translated">Translated</string>
     <string name="btn_translate">Translate</string>
+    <string name="msg_text_copied">Text copied to clipboard.</string>
 </resources>

@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable name="fragment"
+            type="com.serhatd.translate.ui.translate.TranslateFragment" />
 
+        <variable name="viewModel"
+            type="com.serhatd.translate.ui.translate.TranslateViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,23 +29,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/imgSrcLang"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="10"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:src="@drawable/app_icon"
-                app:layout_constraintDimensionRatio="1:1" />
-
             <com.skydoves.powerspinner.PowerSpinnerView
                 android:id="@+id/spSrcLang"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="30"
+                android:layout_weight="40"
                 android:gravity="center"
-                android:hint="@string/hint_language"
+                android:hint="@string/three_dots"
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="4dp"
                 android:textColor="@color/white"
@@ -52,13 +46,14 @@
                 app:layout_constraintTop_toTopOf="@+id/txtSourceCurrency"
                 app:spinner_arrow_gravity="end"
                 app:spinner_arrow_padding="8dp"
-                app:spinner_divider_color="@color/white"
+                app:spinner_divider_color="@color/md_green_400"
                 app:spinner_divider_show="true"
                 app:spinner_divider_size="0.4dp"
-                app:spinner_item_height="50dp"
+                app:spinner_item_height="60dp"
+                app:spinner_popup_background="@color/md_green_400"
                 app:spinner_popup_animation="dropdown"
                 app:spinner_popup_elevation="14dp"
-                app:spinner_popup_max_height="150dp" />
+                app:spinner_popup_max_height="250dp" />
 
             <View
                 android:layout_width="0dp"
@@ -79,23 +74,13 @@
                 android:layout_height="match_parent"
                 android:layout_weight="5" />
 
-            <ImageView
-                android:id="@+id/imgTarLang"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="10"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:src="@drawable/app_icon"
-                app:layout_constraintDimensionRatio="1:1" />
-
             <com.skydoves.powerspinner.PowerSpinnerView
                 android:id="@+id/spTarLang"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="30"
+                android:layout_weight="40"
                 android:gravity="center"
-                android:hint="@string/hint_language"
+                android:hint="@string/three_dots"
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="4dp"
                 android:textColor="@color/white"
@@ -106,13 +91,14 @@
                 app:layout_constraintTop_toTopOf="@+id/txtSourceCurrency"
                 app:spinner_arrow_gravity="end"
                 app:spinner_arrow_padding="8dp"
-                app:spinner_divider_color="@color/white"
+                app:spinner_divider_color="@color/md_green_400"
                 app:spinner_divider_show="true"
                 app:spinner_divider_size="0.4dp"
                 app:spinner_item_height="50dp"
+                app:spinner_popup_background="@color/md_green_400"
                 app:spinner_popup_animation="dropdown"
                 app:spinner_popup_elevation="14dp"
-                app:spinner_popup_max_height="150dp" />
+                app:spinner_popup_max_height="250dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -157,15 +143,22 @@
                     android:layout_weight="2">
 
                     <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_weight="2.5"
+                        android:onClick="@{() -> fragment.copyText(txtSrcLang.getText().toString())}"
                         android:src="@drawable/ic_copy" />
 
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25" />
+
                     <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_weight="2.5"
+                        android:onClick="@{() -> fragment.pasteText(txtSrcLang)}"
                         android:src="@drawable/ic_paste" />
                 </LinearLayout>
             </LinearLayout>
@@ -182,6 +175,7 @@
                 android:textAllCaps="false"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
+                android:onClick="@{() -> viewModel.translate(txtSrcLang.getText().toString(), spSrcLang.getSelectedIndex(), spTarLang.getSelectedIndex())}"
                 android:textSize="20sp"
                 android:text="@string/btn_translate" />
 
@@ -221,16 +215,12 @@
                     android:layout_weight="2">
 
                     <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_weight="2.5"
+                        android:onClick="@{() -> fragment.copyText(txtTarLang.getText().toString())}"
                         android:src="@drawable/ic_copy" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:src="@drawable/ic_paste" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
