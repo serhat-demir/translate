@@ -13,9 +13,15 @@
     <string name="btn_translate">Translate</string>
     <string name="msg_text_copied">Text copied to clipboard.</string>
 
-    <!-- api messages -->
+    <!-- toast messages -->
     <string name="msg_something_went_wrong">Something went wrong. Try again later.</string>
     <string name="msg_same_language">You can not translate to same language.</string>
     <string name="msg_select_language">You must select language before translate.</string>
     <string name="msg_src_text_empty">You must type something to translate.</string>
+
+    <!-- connection messages -->
+    <string name="alert_dialog_title_no_internet">No Internet Connection</string>
+    <string name="alert_dialog_message_no_internet">Check your internet connection.</string>
+    <string name="alert_dialog_button_ok">OK</string>
+    <string name="alert_dialog_button_try_again">Try Again</string>
 </resources>

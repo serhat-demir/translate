@@ -13,9 +13,15 @@
     <string name="btn_translate">Çevir</string>
     <string name="msg_text_copied">Yazı panoya kopyalandı.</string>
 
-    <!-- api messages -->
+    <!-- toast messages -->
     <string name="msg_something_went_wrong">Bir şeyler ters gitti. Daha sonra tekrar deneyin.</string>
     <string name="msg_same_language">Aynı dile çeviri yapamazsınız.</string>
     <string name="msg_select_language">Çeviriden önce dil seçmeniz gerekiyor.</string>
     <string name="msg_src_text_empty">Çeviri için bir şeyler yazmanız gerekiyor.</string>
+
+    <!-- connection messages -->
+    <string name="alert_dialog_title_no_internet">İnternet Yok</string>
+    <string name="alert_dialog_message_no_internet">İnternet bağlantınızı kontrol edin.</string>
+    <string name="alert_dialog_button_ok">Tamam</string>
+    <string name="alert_dialog_button_try_again">Tekrar Dene</string>
 </resources>

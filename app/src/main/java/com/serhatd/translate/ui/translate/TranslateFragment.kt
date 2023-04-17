@@ -15,6 +15,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.serhatd.translate.R
 import com.serhatd.translate.databinding.FragmentTranslateBinding
+import com.serhatd.translate.ui.helper.ConnectionManager
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -28,6 +29,7 @@ class TranslateFragment : Fragment() {
         binding.fragment = this
         binding.viewModel = viewModel
 
+        if (!ConnectionManager.checkInternetConnection(requireContext())) return binding.root
         clipboard = requireContext().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
 
         initObservers()
