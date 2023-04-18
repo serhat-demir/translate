@@ -2,9 +2,9 @@
     <string name="app_name">Translate</string>
 
     <!-- intro -->
-    <string name="intro_text_primary">Translate Over \n100 Language</string>
+    <string name="intro_text_primary">Translate 100+ \nLanguages Instantly</string>
     <string name="intro_text_secondary">Cross language borders with our app</string>
-    <string name="intro_btn_continue">Continue</string>
+    <string name="intro_btn_continue">Start</string>
 
     <!-- translate -->
     <string name="three_dots">…</string>
