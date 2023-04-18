@@ -19,6 +19,8 @@ class TranslateViewModel @Inject constructor(private val prefs: SharedPrefs, pri
     val languages = MutableLiveData<List<Language>>()
     val translatedText = MutableLiveData<String>()
 
+    val errorObserver = MutableLiveData<Boolean>()
+
     fun isIntroSkipped(): Boolean {
         introObserver.value = prefs.isIntroSkipped()
         return prefs.isIntroSkipped()
@@ -30,7 +32,7 @@ class TranslateViewModel @Inject constructor(private val prefs: SharedPrefs, pri
             if (response.isSuccessful && response.body() != null) {
                 languages.value = response.body()!!.languages
             } else {
-                toast.showToast(StringCode.SOMETHING_WENT_WRONG)
+                errorObserver.value = true
             }
         }
     }

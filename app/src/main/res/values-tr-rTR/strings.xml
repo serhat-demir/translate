@@ -24,4 +24,8 @@
     <string name="alert_dialog_message_no_internet">İnternet bağlantınızı kontrol edin.</string>
     <string name="alert_dialog_button_ok">Tamam</string>
     <string name="alert_dialog_button_try_again">Tekrar Dene</string>
+
+    <!-- app unavailable -->
+    <string name="alert_dialog_title_app_unavailable">Uygulama Geçici Olarak Kullanılamıyor</string>
+    <string name="alert_dialog_message_app_unavailable">Uygulamamızda teknik bir sorun var ve bu nedenle şu anda kullanılamıyor. Sorunu gidermek için çalışıyoruz ve en kısa sürede yeniden kullanılabilir hale getireceğiz.</string>
 </resources>

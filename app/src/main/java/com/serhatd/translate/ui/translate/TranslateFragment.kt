@@ -3,12 +3,14 @@ package com.serhatd.translate.ui.translate
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -17,6 +19,7 @@ import com.serhatd.translate.R
 import com.serhatd.translate.databinding.FragmentTranslateBinding
 import com.serhatd.translate.ui.helper.ConnectionManager
 import dagger.hilt.android.AndroidEntryPoint
+import kotlin.system.exitProcess
 
 @AndroidEntryPoint
 class TranslateFragment : Fragment() {
@@ -87,6 +90,22 @@ class TranslateFragment : Fragment() {
         viewModel.translatedText.observe(viewLifecycleOwner) {
             it?.let {
                 binding.txtTarLang.setText(it)
+            }
+        }
+
+        viewModel.errorObserver.observe(viewLifecycleOwner) {
+            it?.let {
+                if (it) {
+                    val builder = AlertDialog.Builder(requireContext())
+                    builder.setTitle(getString(R.string.alert_dialog_title_app_unavailable))
+                    builder.setMessage(R.string.alert_dialog_message_app_unavailable)
+                    builder.setPositiveButton(R.string.alert_dialog_button_ok) { dialog: DialogInterface, _: Int ->
+                        dialog.dismiss()
+                        exitProcess(0)
+                    }
+                    builder.setCancelable(false)
+                    builder.show()
+                }
             }
         }
 
