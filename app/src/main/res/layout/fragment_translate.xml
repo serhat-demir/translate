@@ -94,7 +94,7 @@
                 app:spinner_divider_color="@color/md_green_400"
                 app:spinner_divider_show="true"
                 app:spinner_divider_size="0.4dp"
-                app:spinner_item_height="50dp"
+                app:spinner_item_height="60dp"
                 app:spinner_popup_background="@color/md_green_400"
                 app:spinner_popup_animation="dropdown"
                 app:spinner_popup_elevation="14dp"
