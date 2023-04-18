@@ -2,7 +2,7 @@
     <string name="app_name">Çeviri</string>
 
     <!-- intro -->
-    <string name="intro_text_primary">100\'den Fazla \nDile Çevir</string>
+    <string name="intro_text_primary">100+ Dile \nAnında Çevir</string>
     <string name="intro_text_secondary">Uygulamamızla dil sınırlarını aşın</string>
     <string name="intro_btn_continue">Devam Et</string>
 
